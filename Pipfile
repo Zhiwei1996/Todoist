@@ -1,0 +1,19 @@
+[[source]]
+url = "https://pypi.doubanio.com/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+django = "==1.8.19"
+djangorestframework = "==3.6.4"
+django-filter = "==1.0.4"
+markdown = "*"
+coreapi = "*"
+pyyaml = "*"
+coreapi-cli = "*"
+
+[dev-packages]
+pylint = "<2.0.0"
+
+[requires]
+python_version = "2.7"
