@@ -22,8 +22,8 @@ from rest_framework import mixins, generics, permissions
 
 def index(request):
     return render(request, 'todoist/index.html', context={
-        'title': '我的博客首页',
-        'welcome': '欢迎访问我的博客首页'
+        'title': 'Hello',
+        'welcome': 'Hello, World'
     })
 
 
@@ -57,6 +57,9 @@ class TodoDetail(mixins.RetrieveModelMixin,
         return self.retrieve(request, *args, **kwargs)
 
     def put(self, request, *args, **kwargs):
+        return self.update(request, *args, **kwargs)
+
+    def patch(self, request, *args, **kwargs):
         return self.update(request, *args, **kwargs)
 
     def delete(self, request, *args, **kwargs):
