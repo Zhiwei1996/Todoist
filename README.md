@@ -72,7 +72,7 @@ To create a production build, use yarn build.
 **Todoist API Documents**
 
 API
-<div align="center"> <img src="./pics/Todoist API.png" width="800"/> </div><br>
+<div align="center"> <img src="./pics/Todoist API.png" /> </div><br>
 
 
 **TODO:**
