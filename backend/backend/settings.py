@@ -27,7 +27,7 @@ SECRET_KEY = '*z@d8v5n*4xuv(9!ffpvr!d$@7d5h*&yxhyfddi1%!n-9-c_b4'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -40,6 +40,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'corsheaders',
     'todoist',
 )
 
@@ -67,6 +68,8 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'corsheaders.middleware.CorsMiddleware',
+                'django.middleware.common.CommonMiddleware',
             ],
         },
     },
@@ -74,6 +77,26 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'backend.wsgi.application'
 
+# CORS
+# https://github.com/ottoyiu/django-cors-headers/#configuration
+CORS_ORIGIN_ALLOW_ALL = True
+CORS_ALLOW_CREDENTIALS = True
+CORS_ORIGIN_WHITELIST = (
+    'localhost:3000',
+    '127.0.0.1:3000',
+    '192.168.151.65',
+)
+CORS_ORIGIN_REGEX_WHITELIST = (
+    r'^(http?://)?localhost$',
+)
+CORS_ALLOW_METHODS = (
+    'DELETE',
+    'GET',
+    'OPTIONS',
+    'PATCH',
+    'POST',
+    'PUT',
+)
 
 # Database
 # https://docs.djangoproject.com/en/1.8/ref/settings/#databases

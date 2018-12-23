@@ -11,6 +11,7 @@ markdown = "*"
 coreapi = "*"
 pyyaml = "*"
 coreapi-cli = "*"
+django-cors-headers = "*"
 
 [dev-packages]
 pylint = "<2.0.0"
