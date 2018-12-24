@@ -1,5 +1,5 @@
 # Todoist
-A Simple Todo List Web App
+A Simple Todo List App
 
 Demo
 
@@ -55,7 +55,7 @@ Starting development server at http://127.0.0.1:8000/
 Quit the server with CONTROL-C.
 ```
 
-构建 React 环境并启动前端服务
+构建 React 环境并启动前端服务
 ```bash
 $ cd frontend/
 $ yarn
